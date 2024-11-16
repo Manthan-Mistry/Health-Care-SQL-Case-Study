@@ -34,7 +34,7 @@ This project focuses on analyzing and managing data for a hospital using SQL. Th
  
 
 ## Results
-### Recent Appointments
+### Follow-up Appointments
 
 | Patient_ID | Patient_Name     | Last_Appointment |
 |------------|------------------|-------------------|
