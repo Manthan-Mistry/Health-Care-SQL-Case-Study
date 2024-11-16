@@ -9,6 +9,7 @@ This project focuses on analyzing and managing data for a hospital using SQL. Th
 3. [Features](#features)
 4. [Key SQL Scripts](#key-sql-scripts)
 5. [Results](#results)
+6. [Output Images](#output)
 
 ## Technologies Used
 - SQL Server Management Studio (SSMS)
@@ -82,5 +83,10 @@ This project focuses on analyzing and managing data for a hospital using SQL. Th
 | Dr. Christine Liu  | 50.00%                |
 | Dr. Evelyn White   | 100.00%               |
 
+## Output
 
-
+![Q-1](https://github.com/Manthan-Mistry/Health-Care-SQL-Case-Study/blob/main/Images/Q-3.png)
+![Q-2](https://github.com/Manthan-Mistry/Health-Care-SQL-Case-Study/blob/main/Images/Q-6.png)
+![Q-3](https://github.com/Manthan-Mistry/Health-Care-SQL-Case-Study/blob/main/Images/Q-9.png)
+![Q-4](https://github.com/Manthan-Mistry/Health-Care-SQL-Case-Study/blob/main/Images/Q-5.png)
+![Q-5](https://github.com/Manthan-Mistry/Health-Care-SQL-Case-Study/blob/main/Images/Q-8.png)
