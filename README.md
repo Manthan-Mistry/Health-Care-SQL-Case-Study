@@ -19,7 +19,7 @@ This project focuses on analyzing and managing data for a hospital using SQL. Th
 - dbdiagram.io for ER diagram creation
 
 ## Database Schema
-![ER Diagram](HealthCase.drawio.svg)
+![ER Diagram](https://github.com/Manthan-Mistry/Health-Care-SQL-Case-Study/blob/main/Healthcare%20ERD.png)
 
 ## Features
 - **Top Patient Visits Analysis**: Identify the top 5 patients with the most visits over the past year.
