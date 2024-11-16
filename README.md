@@ -4,57 +4,83 @@
 This project focuses on analyzing and managing data for a hospital using SQL. The project includes various SQL queries and analyses designed to extract key insights, optimize operations, and support data-driven decision-making. The main objectives are to identify patient visit trends, calculate treatment costs, and generate insightful reports for hospital administrators.
 
 ## Table of Contents
-- [Technologies Used](#technologies-used)
-- [Database Schema](#database-schema)
-- [Features](#features)
-- [Key SQL Scripts](#key-sql-scripts)
-- [Results and Visuals](#results-and-visuals)
-- [Setup Instructions](#setup-instructions)
-- [Example Queries](#example-queries)
-- [License](#license)
+1. [Technologies Used](#technologies-used)
+2. [ER Diagram](#er-diagram)
+3. [Features](#features)
+4. [Key SQL Scripts](#key-sql-scripts)
+5. [Results](#results)
 
 ## Technologies Used
 - SQL Server Management Studio (SSMS)
 - SQL for data analysis and manipulation
 - dbdiagram.io for ER diagram creation
 
-## Database Schema
+## ER Diagram
 ![ER Diagram](https://github.com/Manthan-Mistry/Health-Care-SQL-Case-Study/blob/main/Healthcare%20ERD.png)
 
 ## Features
-- **Top Patient Visits Analysis**: Identify the top 5 patients with the most visits over the past year.
 - **Doctor Performance Metrics**: Calculate the percentage of appointments covered by insurance for each doctor.
 - **Age-Based Revenue Buckets**: Analyze total revenue based on age groups.
 - **Treatment Cost Analysis**: Find treatments within the top 10% of cost.
 - **Comprehensive Patient Cost Calculation**: Aggregate the total treatment cost per patient, grouped by diagnosis.
+- **Top Patient Visits Analysis**: Identify the top 5 patients with the most visits over the past year.
 
 ## Key SQL Scripts
-- **`top_patient_visits.sql`** – Identifies the top 5 patients with the most visits.
-- **`doctor_insurance_coverage.sql`** – Calculates insurance coverage percentages for doctors.
-- **`age_group_revenue.sql`** – Analyzes total revenue categorized by patient age buckets.
-- **`high_cost_treatments.sql`** – Lists treatments in the top 10% of cost.
-- **`total_treatment_cost_per_diagnosis.sql`** – Aggregates treatment costs per patient by diagnosis.
+- **`patient follow up required but not visited past 6 month `** – Identifies the top 5 patients with the most visits.
+- **`avg_doctor_treatment cost more than overall avg_treatment_cost`** – Identifies high treatment cost doctors V/s overall treatment cost.
+- **`patient segmentation based on age-bucket`** – Analyzes total revenue categorized by patient age buckets.
+- **`high_cost_treatments`** – Lists treatments in the top 10% of cost.
+- **`patient Lifetime Value (LTV)`** – Calculates total billed amounts for patients, focusing on those with at least 50% of appointments not covered by insurance.
+ 
 
-## Results and Visuals
-### Sample Output: Top Patient Visits
-| Patient Name | Total Visits | Last Appointment Date |
-|--------------|--------------|-----------------------|
-| John Smith   | 15           | 2024-11-01            |
-| Mary Jones   | 12           | 2024-10-25            |
+## Results
+### Recent Appointments
 
-### Insurance Coverage Percentage for Doctors
-| Doctor Name | Insurance Coverage (%) |
-|-------------|-------------------------|
-| Dr. Adams   | 92.50                  |
-| Dr. Baker   | 85.00                  |
+| Patient_ID | Patient_Name     | Last_Appointment |
+|------------|------------------|-------------------|
+| 1          | John Doe         | 2023-10-01        |
+| 3          | Michael Brown    | 2023-08-22        |
+| 4          | Emily Davis      | 2023-11-05        |
 
-### Age-Based Revenue Buckets
-| Age Group | Total Visits | Total Revenue |
-|-----------|--------------|---------------|
-| 18-35     | 120          | $150,000      |
-| 51-70     | 85           | $200,000      |
+### Doctor Average Treatment Cost
 
-## Setup Instructions
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/hospital-management-sql.git
+| Doctor_ID | Full_Name         | Avg_Cost |
+|-----------|-------------------|----------|
+| 4         | Dr. Daniel Green  | 500.00   |
+
+
+### Age-Based Revenue Analysis
+
+| Age_Bucket | Total_Visits | Total_Revenue |
+|------------|--------------|---------------|
+| 18-35      | 1            | 200.00        |
+| 18-35      | 2            | 590.00        |
+| 36-50      | 2            | 230.00        |
+| 36-50      | 2            | 250.00        |
+| 51-70      | 1            | 120.00        |
+
+
+### Treatment Costs
+
+| Treatment_Cost | Treatment_Code | Cost_Percentile | Prnk |
+|----------------|----------------|-----------------|------|
+| 500.00         | FX004          | 1               | 0    |
+
+
+### Patient Total Treatment Cost
+
+| Patient_ID | Total_Cost |
+|------------|------------|
+| 3          | 230.00     |
+| 5          | 120.00     |
+
+### Insurance Covered (%) by Doctors
+
+| Full_Name          | Insurance_covered_pct |
+|--------------------|-----------------------|
+| Dr. Alice Roberts  | 100.00%               |
+| Dr. Christine Liu  | 50.00%                |
+| Dr. Evelyn White   | 100.00%               |
+
+
+
